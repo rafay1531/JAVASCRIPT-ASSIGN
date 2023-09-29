@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSIGN</title>
+</head>
+
+<body>
+    <!-- *********************** Chapter 46, 48 (Events) ************************************ -->
+
+    <!-- Question 1
+    <button id="myButton">Click me!</button>
+    <script src="app.js"></script>
+
+    Question 2
+    <title>Hide Element on Click</title>
+    <style>
+        .elementToHide {
+            display: block;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+    </head>
+
+    <body>
+        <button id="showButton">Show Element</button>
+        <div id="elementToHide" class="elementToHide">
+            This element will be hidden when you click the button above.
+        </div>
+        <script src="app.js"></script>
+
+        Question 3
+        <html>
+
+        <head>
+            <title>Link Color Change on Hover</title>
+            <style>
+             
+                .myLink {
+                    color: blue;
+                }
+
+            
+                .myLink:hover {
+                    color: red;
+                }
+            </style>
+        </head>
+
+        <body>
+            <a href="#" class="myLink" id="hoverLink">Hover over me!</a>
+            <script src="app.js"></script>
+        </body>
+
+        </html>
+
+        Question 4
+        <html>
+
+        <head>
+            <title>Scroll to Top on Click</title>
+        </head>
+
+        <body>
+            <a href="#" id="scrollToTopLink">Scroll to Top</a>
+            <script src="app.js"></script>
+        </body>
+
+        </html>
+
+        Question 5
+        <html>
+
+        <head>
+            <title>Play Sound on Click</title>
+        </head>
+
+        <body>
+            <a href="#" id="playSoundLink">Play Sound</a>
+            <audio id="audio" src="path/to/your/soundfile.mp3"></audio>
+            <script src="app.js"></script>
+        </body>
+
+        </html>
+
+        Question 6
+        <html>
+
+        <head>
+            <title>Open New Window on Click</title>
+        </head>
+
+        <body>
+            <a href="https://www.example.com" target="_blank">Open New Window</a>
+        </body>
+
+        </html>
+
+        Question 7
+        <html>
+
+        <head>
+            <title>Button Click Alert</title>
+        </head>
+
+        <body>
+            <button id="myButton">Click me!</button>
+            <script>
+                const myButton = document.getElementById("myButton");
+                myButton.addEventListener("click", () => {
+                    alert("You clicked the button!");
+                });
+            </script>
+        </body>
+
+        </html>
+
+        Question 8
+        <html>
+
+        <head>
+            <title>Button Color Change on Hover</title>
+            <style>
+                .myButton {
+                    padding: 10px 20px;
+                    font-size: 16px;
+                    background-color: blue;
+                    color: white;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .myButton:hover {
+                    background-color: red;
+                }
+            </style>
+        </head>
+
+        <body>
+            <button class="myButton">Hover over me!</button>
+        </body>
+
+        </html>
+
+        Question 9
+        <html>
+
+        <head>
+            <title>Play Sound on Click</title>
+        </head>
+
+        <body>
+            <button onclick="playSound()">Play Sound</button>
+            <audio id="audio" src="path/to/your/soundfile.mp3"></audio>
+            <script>
+                function playSound() {
+                    const audio = document.getElementById("audio");
+                    audio.play();
+                }
+            </script>
+        </body>
+
+        </html>
+
+        Question 10
+        <html>
+
+        <head>
+            <title>Mouse Over Event</title>
+        </head>
+
+        <body>
+            <div id="myElement">Move your mouse over me!</div>
+            <script>
+                const myElement = document.getElementById("myElement");
+                myElement.addEventListener("mouseover", () => {
+                    alert("You moved your mouse over the element!");
+                });
+            </script>
+        </body>
+
+        </html>
+
+        Question 11
+        <html>
+
+        <head>
+            <title>Hide Element on Mouse Out</title>
+            <style>
+                .myElement {
+                    width: 200px;
+                    height: 100px;
+                    background-color: lightblue;
+                    padding: 10px;
+                }
+
+                .hidden {
+                    display: none;
+                }
+            </style>
+        </head>
+
+        <body>
+            <div class="myElement" id="myElement">Move your mouse out of me!</div>
+            <script>
+                const myElement = document.getElementById("myElement");
+                myElement.addEventListener("mouseout", () => {
+                    myElement.classList.add("hidden");
+                });
+            </script>
+        </body>
+
+        </html>
+
+        Question 12
+        <html>
+
+        <head>
+            <title>Open Window</title>
+            <script>
+                function openResizableWindow() {
+                    const mouseX = window.event.clientX;
+                    const mouseY = window.event.clientY;
+                    const windowWidth = mouseX + 100;
+                    const windowHeight = mouseY + 100;
+                    const newWindow = window.open('', '', `width=${windowWidth}, height=${windowHeight}, resizable=yes`);
+                    newWindow.document.write('<html><head><title>New Window</title></head><body>');
+                    newWindow.document.write('<h1>New Window Content</h1>');
+                    newWindow.document.write('<p>This is a new window.</p>');
+                    newWindow.document.write('<button onclick="closeWindow()">Close Window</button>');
+                    newWindow.document.write('</body></html>');
+                    newWindow.document.close();
+                }
+                function closeWindow() {
+                    window.close();
+                }
+            </script>
+        </head>
+
+        <body>
+            <a href="javascript:void(0);" onclick="openResizableWindow();">Open New Window</a>
+        </body>
+
+        </html> -->
+
+        <!-- ************** Chapter 49, 50 (Reading and Setting field values) ******************************** -->
+
+<!-- Question 1
+<html>
+<head>
+  <title>Input Example</title>
+</head>
+<body>
+  <script>
+    var userInput = prompt("Please enter something:");
+    if (userInput !== null) {
+      console.log("User input: " + userInput);
+    } else {
+      console.log("User canceled the input.");
+    }
+  </script>
+</body>
+</html>
+
+Question 2
+<html>
+<head>
+  <title>Checkbox Example</title>
+</head>
+<body>
+  <label for="checkbox">Check this box:</label>
+  <input type="checkbox" id="checkbox">
+  <button onclick="getValue()">Get Checkbox Value</button>
+  <script>
+    function getValue() {
+      var checkbox = document.getElementById("checkbox");
+      if (checkbox.checked) {
+        console.log("Checkbox is checked");
+      } else {
+        console.log("Checkbox is not checked");
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 3
+<html>
+<head>
+  <title>Select Box Example</title>
+</head>
+<body>
+  <label for="selectBox">Select an option:</label>
+  <select id="selectBox">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select>
+  <button onclick="getValue()">Get Selected Value</button>
+  <script>
+    function getValue() {
+      var selectBox = document.getElementById("selectBox");
+      var selectedValue = selectBox.value;
+      console.log("Selected value: " + selectedValue);
+    }
+  </script>
+</body>
+</html>
+
+Question 4
+<html>
+<head>
+  <title>Text in a Field</title>
+</head>
+<body>
+  <input type="text" id="myTextField" value="This is some text in the field">
+  <button onclick="getTextFromField()">Get Text</button>
+  <script>
+    function getTextFromField() {
+      var textField = document.getElementById("myTextField");
+      var textValue = textField.value;
+      alert("Text in the field: " + textValue);
+    }
+  </script>
+</body>
+</html>
+
+Question 5
+<html>
+<head>
+  <title>Marital Status</title>
+</head>
+<body>
+  <label for="maritalStatus">Are you married?</label>
+  <select id="maritalStatus">
+    <option value="married">Yes</option>
+    <option value="single">No</option>
+  </select>
+  <button onclick="setStatus()">Set Status</button>
+  <input type="text" id="status">
+  <script>
+    function setStatus() {
+      var maritalStatus = document.getElementById("maritalStatus").value;
+      var statusField = document.getElementById("status");
+      if (maritalStatus === "single") {
+        statusField.value = "available";
+      } else {
+        statusField.value = "";
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 6
+<html>
+<head>
+  <title>Fill Empty Input</title>
+</head>
+<body>
+  <input type="text" id="myInput" placeholder="Enter text here">
+  <button onclick="fillInput()">Fill Input</button>
+  <script>
+    function fillInput() {
+      var inputField = document.getElementById("myInput");
+      var inputValue = inputField.value;
+      if (inputValue.trim() === "") {
+        // Fill the input with a string
+        inputField.value = "Default Value";
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 7
+<html>
+<head>
+  <title>Registration Form with Validation</title>
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <span class="error" id="nameError"></span><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error" id="emailError"></span><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <span class="error" id="passwordError"></span><br><br>
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required>
+    <span class="error" id="confirmPasswordError"></span><br><br>
+    <input type="submit" value="Register">
+  </form>
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      var isValid = true;
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("passwordError").textContent = "";
+      document.getElementById("confirmPasswordError").textContent = "";
+      if (name.length < 2) {
+        document.getElementById("nameError").textContent = "Name must be at least 2 characters";
+        isValid = false;
+      }
+      if (!email.includes("@")) {
+        document.getElementById("emailError").textContent = "Invalid email address";
+        isValid = false;
+      }
+      if (password.length < 6) {
+        document.getElementById("passwordError").textContent = "Password must be at least 6 characters";
+        isValid = false;
+      }
+      if (password !== confirmPassword) {
+        document.getElementById("confirmPasswordError").textContent = "Passwords do not match";
+        isValid = false;
+      }
+      return isValid;
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- ********************* Chapter 51 (Reading and Setting paragraph text) ***********************  -->
+
+<!-- Question 1
+<html>
+<head>
+  <title>Expandable Paragraph</title>
+  <style>
+    #expandable-paragraph {
+      height: 50px; 
+      overflow: hidden; 
+      transition: height 0.3s; 
+    }
+  </style>
+</head>
+<body>
+  <div id="expandable-paragraph">
+    <p>
+      This is some content that can be expanded by clicking "Show More." 
+      It can contain as much text as needed.
+    </p>
+  </div>
+  <button onclick="toggleExpand()">Show More</button>
+  <script>
+    function toggleExpand() {
+      var paragraph = document.getElementById("expandable-paragraph");
+      var button = document.querySelector("button");
+      if (paragraph.style.height === "50px") {
+        paragraph.style.height = "auto"; 
+        button.textContent = "Show Less";
+      } else {
+        paragraph.style.height = "50px";
+        button.textContent = "Show More";
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 2
+<html>
+<head>
+  <title>Search for Word or Phrase</title>
+</head>
+<body>
+  <p id="paragraph">
+    This is an example paragraph. It contains some text that we will search for.
+  </p>
+  <input type="text" id="searchInput" placeholder="Enter word or phrase">
+  <button onclick="searchText()">Search</button>
+  <div id="searchResult"></div>
+  <script>
+    function searchText() {
+      var paragraphText = document.getElementById("paragraph").textContent;
+      var searchInput = document.getElementById("searchInput").value;
+      var searchRegex = new RegExp(searchInput, 'gi');
+      var matches = paragraphText.match(searchRegex);
+      if (matches) {
+        document.getElementById("searchResult").textContent = "Found " + matches.length + " matches.";
+      } else {
+        document.getElementById("searchResult").textContent = "No matches found.";
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 3
+<html>
+<head>
+  <title>Find Longest Word</title>
+</head>
+<body>
+  <p id="paragraph">
+    This is an example paragraph. It contains some text, and we will find the longest word within it.
+  </p>
+  <button onclick="findLongestWord()">Find Longest Word</button>
+  <div id="longestWord"></div>
+  <script>
+    function findLongestWord() {
+      var paragraphText = document.getElementById("paragraph").textContent;
+      var words = paragraphText.split(/\s+/);
+      var longestWord = "";
+      var maxLength = 0;
+      for (var i = 0; i < words.length; i++) {
+        var word = words[i];
+        word = word.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
+        if (word.length > maxLength) {
+          maxLength = word.length;
+          longestWord = word;
+        }
+      }
+      document.getElementById("longestWord").textContent = "Longest Word: " + longestWord;
+    }
+  </script>
+</body>
+</html>
+
+Question 4
+
+HTMl
+<html>
+<head>
+  <title>Set Paragraph Text from Text Field</title>
+</head>
+<body>
+  <input type="text" id="textField" placeholder="Enter text">
+  <button onclick="setTextFromField()">Set Paragraph Text</button>
+  <p id="outputParagraph">This is the paragraph text.</p>
+  <script>
+    function setTextFromField() {
+      var textFieldValue = document.getElementById("textField").value;
+      var outputParagraph = document.getElementById("outputParagraph");
+      if (textFieldValue.trim() !== "") {
+        outputParagraph.textContent = textFieldValue;
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 5
+<html>
+<head>
+  <title>Set Paragraph Text with Specific Word or Phrase</title>
+</head>
+<body>
+  <input type="text" id="textField" placeholder="Enter specific word or phrase">
+  <button onclick="setTextFromField()">Set Paragraph Text</button>
+  <p id="outputParagraph">This is the paragraph text.</p>
+  <script>
+    function setTextFromField() {
+      var textFieldValue = document.getElementById("textField").value;
+      var outputParagraph = document.getElementById("outputParagraph");
+      var specificWordOrPhrase = "example";
+      if (textFieldValue === specificWordOrPhrase) {
+        outputParagraph.textContent = textFieldValue;
+      }
+    }
+  </script>
+</body>
+</html>
+
+Question 6
+<html>
+<head>
+  <title>Set Paragraph Text with Length Limit</title>
+</head>
+<body>
+  <input type="text" id="textField" placeholder="Enter text (less than 10 characters)">
+  <button onclick="setTextFromField()">Set Paragraph Text</button>
+  <p id="outputParagraph">This is the paragraph text.</p>
+  <script>
+    function setTextFromField() {
+      var textFieldValue = document.getElementById("textField").value;
+      var outputParagraph = document.getElementById("outputParagraph");
+      var maxLength = 10;
+      if (textFieldValue.length < maxLength) {
+        outputParagraph.textContent = textFieldValue;
+      } else {
+        alert("Text exceeds the maximum length of " + maxLength + " characters.");
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- ******************* CHAPTER 52 (Manipulating Images and Text) *************************  -->
+
+<!-- Question 1
+<html>
+<head>
+  <title>Toggle Bold Text</title>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <p id="sentence" onclick="toggleBold()">Click on this sentence to make it bold.</p>
+  <script>
+    function toggleBold() {
+      var sentence = document.getElementById("sentence");
+      sentence.classList.toggle("bold");
+    }
+  </script>
+</body>
+</html>
+
+Question 2
+<html>
+<head>
+  <title>Image Hover Text</title>
+  <style>
+    .container {
+      position: relative;
+      width: 300px; 
+    }
+    .image {
+      width: 100%;
+      height: auto;
+    }
+    .text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      background-color: rgba(0, 0, 0, 0.7); 
+      color: white;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .container:hover .image {
+      display: none;
+    }
+    .container:hover .text {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="image" src="your-image.jpg" alt="Your Image">
+    <div class="text">
+      This is the text that appears on hover.
+    </div>
+  </div>
+</body>
+</html>
+
+Question 3
+<html>
+<head>
+  <title>Mouseover Heading Effect</title>
+  <style>
+    h1 {
+      background-color: lightgray;
+      padding: 10px;
+      transition: background-color 0.3s ease; 
+    }
+    h1:hover {
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+</body>
+</html>
+
+Question 4
+<html>
+<head>
+  <title>Underline Text on Hover</title>
+  <style>
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    p:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <p>
+    This is a paragraph of text. When you hover over it, the text will become underlined.
+  </p>
+</body>
+</html> -->
+
+<!-- ****************** CHAPTER 52  (Swapping Images) ****************************************** -->
+
+<!-- Question 1
+<html>
+<head>
+  <title>Swap Images on Button Click</title>
+</head>
+<body>
+  <img id="image" src="image1.jpg" alt="Image 1">
+  <button onclick="swapImage()">Swap Image</button>
+  <script>
+    var imageElement = document.getElementById("image");
+    var currentImage = 1;
+    function swapImage() {
+      currentImage = (currentImage === 1) ? 2 : 1;
+      if (currentImage === 1) {
+        imageElement.src = "image1.jpg";
+        imageElement.alt = "Image 1";
+      } else {
+        imageElement.src = "image2.jpg";
+        imageElement.alt = "Image 2";
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+    </body>
+
+</html>
